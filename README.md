@@ -1,7 +1,7 @@
 # Compatibility Predictor
 ## Welcome to the Compatibility Predictor!
 
-This program will help you calculate the best candidate for the team!
+This program will help you calculate the best candidate for your team of any size!
 
 To use this program:
 1. Clone the repo with the `git clone [SSH key or HTTPS address]` command.
