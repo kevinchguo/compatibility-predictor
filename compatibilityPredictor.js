@@ -4,7 +4,7 @@ const compatibilityPredictor = function (data) {
   const team = data.data().team;
   const applicants = data.data().applicants;
 
-  let output = { scoredApplicants: [] };
+  let output = { "scoredApplicants": [] };
 
   let attributeRatio = {};
   let attributeTotal = 0;
@@ -24,11 +24,12 @@ const compatibilityPredictor = function (data) {
   }
 
   // Calculates the ratio of each attribute by dividing the total amount of all attributes.
-  for (let weight in attributeRatio) {
-    attributeRatio[weight] =
-      (1 - (attributeRatio[weight] / attributeTotal)) / amountOfAttributes - 1;
+  for (let ratio in attributeRatio) {
+    attributeRatio[ratio] =
+      (1 - (attributeRatio[ratio] / attributeTotal)) / amountOfAttributes - 1;
   }
-  //Calculate the final score of each applicant
+
+  // Calculate the final score of each applicant
   let finalScoreTotal = 0;
   for (let person in applicants) {
     let applicantFinalScore = 0;
@@ -39,8 +40,8 @@ const compatibilityPredictor = function (data) {
         applicants[person].attributes[attribute] * attributeRatio[attribute];
     }
     output.scoredApplicants.push({
-      name: applicants[person].name,
-      score: Math.round(applicantFinalScore * 100) / 100,
+      "name": applicants[person].name,
+      "score": Math.round(applicantFinalScore * 100) / 100,
     });
   }
 
