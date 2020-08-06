@@ -4,8 +4,8 @@
 This program will help you calculate the best candidate for the team!
 
 To use this program:
-1. Clone the repo with the `git clone` command.
-1. Run `npm install`.
+1. Clone the repo with the `git clone [SSH key or HTTPS address]` command.
+1. Run `npm install` in the file directory.
 1. Finally run `node compatibilityPredictor.js` on the command line.
 
 The person with the highest score will be the best candidate for the job!
@@ -73,7 +73,7 @@ Input:
     ]
 }
 ```
-output:
+Output:
 ```
 {
     “scoredApplicants” : [
